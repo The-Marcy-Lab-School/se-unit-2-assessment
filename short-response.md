@@ -51,7 +51,9 @@
   bestPlayer.name = "Kevin Durant";
   console.log(theGOAT.name);
   ```
-
+  This  is what we called a pass by reference. bestPlayer is an object and will be mutated by the code above. So when we run theGOAT it is
+  updated to the value of the name key within bestPlayer.
+  
 6. **What is the value of `b` after this code runs? Explain why this is the case.**
   ```javascript
   let a = 10;
@@ -61,6 +63,8 @@
   console.log(a);
   console.log(b);
   ```
+  The value of b after the code is ran is 10, not 20. This is because the only thing that was updated was the variable a not b. We assigned the original value of a to b, but
+  that does not mean we are constantly updating the variable b with the value of a.
 
 7. **Where does the following code throw an error? What type of error? Why?**
   ```javascript

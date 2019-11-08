@@ -36,8 +36,30 @@ for(i = 1; i < newArray.length; i++) {
 
 
 // Question 3
-function letterCaseCounts() {
+function letterCaseCounts(string) {
+    
+    let lowCounter = 0;
+    let upperCounter = 0;
+    let neighterCounter = 0;
+    let neighterRegex = /^[a-zA-Z0-9!@#\$%\^\&*\)\(+=._-]+$/g
 
+    upperCounter = (string.match(/[A-Z]/g) || []).length;
+    lowCounter = (string.match(/[a-z]/g) || []).length;
+
+// let newString = string.split("");
+// for (i = 0; i < newString.length; i++) {
+// if (newString[i] == ' ' || newString.match(/\W|_/g) !== null) {
+//   neighterCounter = neighterCounter + 1;
+// }
+
+// }
+
+
+// MY attempt at the last property^
+
+neighterCounter = (string.match(neighterRegex) || []).length;
+
+console.log("uppercase: " + upperCounter + ", lowercase: " + lowCounter + ", neighter: " + neighterCounter);
 }
 
 // Don't write below this line...
