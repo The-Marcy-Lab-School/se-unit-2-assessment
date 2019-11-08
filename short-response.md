@@ -2,7 +2,7 @@
 ## Written Assessment
 
 1. **What is hoisting? Describe how hoisting affects variable _and_ function declarations. Provide a code snippet to illustrate hoisting for both.** 
-Answer: Hoisting is the process of JavaScript uplifting our functions calling to the top of our code.
+Answer: Hoisting is the process of JavaScript uplifting our functions calling to the top of our code. Only `var` variables and function declarations are hoisted. 
 
 
 
@@ -103,7 +103,6 @@ Answer: The purpose of _rest parameters_ is to be able to use our function whene
 
 
 
-
 10. **What does the following code log? Why?**
   ```javascript
   let theCreator = 'Devonte';
@@ -115,7 +114,7 @@ Answer: The purpose of _rest parameters_ is to be able to use our function whene
   shoutOut();
   console.log(`The best designer in the room is ${theCreator}`.);
   ```
-
+Answer: The following code logs `"The best designer in the room is Peter"` because we are reassigning `theCreator` value to equal `"Peter"` on line 112.
 
 11. **What does the following code log? Why?**
   ```javascript
@@ -129,7 +128,8 @@ Answer: The purpose of _rest parameters_ is to be able to use our function whene
   shoutOut();
   console.log(`${theHustler} is also the hardest working person in the room.`);
   ```
-
+Answer: Line 129 logs `"Paul is the hardest working person in the room."` because we are declaring a new `theHustler` inside a function scope and assigning it a value of `"Paul"` and we are logging inside our function so it is only looking within that scope.
+Line 130 logs `"Laisha is also the hardest working person in the room."` because since  `theHustler` was also declared outside the function and logged outside the function JavaScript is just ignoring our function and logging the `theHustler` outside that is assigned `"Laisha"`.
 
 12. **What does the following code log? Why?**
   ```javascript
@@ -143,10 +143,11 @@ Answer: The purpose of _rest parameters_ is to be able to use our function whene
   setLocation(address);
   console.log(`Our address is ${address}`);
   ```
-
+Answer: On line 143 logs `"829 Jefferson Ave."` because we are passing `address` as an argument into our function `setLocation` and our function reassign `address` value to `location` value. On line 144 `console.log` logs `"Our address is 7 Marcus Garvey"` because `address` value is `"7 Marcus Garvey"` so string interpolation just concatnate the sentence and value of `address`.
 
 13. **What do we mean when we say that JavaScript passes variables _by value_?**
+Answer: When we say that JavaScript passes variables by value we just mean that a copy of the varibale value is passed. This will not affect the first value only the copy value.
 
 
 14. **What does it mean to _pass by reference_? In what ways do arrays and objects appear to be passed by reference in JavaScript?**
-
+Answer: To pass by reference means a pointer to memory address of the variable value. Meaning the actual value will be affected. If you are mutating the arrays and objects value then this will appear to be passed by reference in JavaScript.
