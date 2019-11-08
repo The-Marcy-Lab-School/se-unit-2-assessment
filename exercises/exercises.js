@@ -39,11 +39,8 @@ function letterCaseCounts(str) {
   for (const letter of str) {
     if (letter.charCodeAt() > 64 && letter.charCodeAt() < 91) {
       count.uppercase += 1;
-      continue;
-    }
-    if (letter.charCodeAt() > 96 && letter.charCodeAt() < 123) {
+    } else if (letter.charCodeAt() > 96 && letter.charCodeAt() < 123) {
       count.lowercase += 1;
-      continue;
     } else {
       count.neither += 1;
     }
