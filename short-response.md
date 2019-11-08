@@ -3,6 +3,9 @@
 
 1. **What is hoisting? Describe how hoisting affects variable _and_ function declarations. Provide a code snippet to illustrate hoisting for both.** 
 
+  Hoisting is the process of moving all declared variables to the top of your code. 
+  Variables that use keywords such as let or const are not hoisted, though.
+  
 
 2. **Why does the following block of code throw an error?**
   ```javascript
@@ -16,6 +19,8 @@
 
   console.log(status);
 ```
+  On line 20, the console is trying to display status but status is actually out of reach. It is not a global variable like const isMaya.
+  It was declared within the conditional on line 14 and therefore out of scope will return a reference error because it is not defined.
 
 
 3. **Why does the following block of code NOT throw an error?**
@@ -30,7 +35,8 @@
 
   console.log(status);
   ```
-
+  It does not show an error because status is initialize with keyword var rather than let or var. Due to this, it was hoisted and can be
+  reached by the console.log() which is not within the conditional.
 
 
 4. **In JavaScript, we can declare variables with `var`, `let`, and `const`. What are the differences between each? Be sure to comment on how each declaration impacts the _scope_, _reassignment_, and _hoisting_ of variables.**
