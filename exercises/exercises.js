@@ -15,9 +15,11 @@ function stripPunctuation(str) {
 }
 
 // Question 2
-function rotateArray(array) {
-  if (array === -1) {
-    return [];
+function rotateArray(arr) {
+  let arr = array;
+  let empty = [];
+  if (array.length <= 0) {
+    return empty;
   }
   if (!Array.isArray(array)) {
     return undefined;
