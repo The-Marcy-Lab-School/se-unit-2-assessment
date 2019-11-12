@@ -144,7 +144,7 @@ sum(1, 2, 5, 6, 7, 10); // 31
   shoutOut();
   console.log(`${theHustler} is also the hardest working person in the room.`);
   ```
-- It first logs `Paul is the hardest working person in the room.`, then it logs `Laisha is also the hardest working person in the room.`. It logs Paul first because there is a `let` variable declared in the function, making it inaccessible to the global scope. In this function, the variable is reassigned to Paul, and when the function is called, it executes. When you log the sentence from the global scope, there's already the same variable with a different value. You call this variable instead since the global scope cannot access the variable inside the function, and it returns Laisha.
+- It first logs `Paul is the hardest working person in the room.`, then it logs `Laisha is also the hardest working person in the room.`. It logs Paul first because there is a `let` variable declared in the function, making it inaccessible to the global scope. In this function, the variable is declared and initialized to Paul, and when the function is called, it executes. When you log the sentence from the global scope, there's already the same variable with a different value. You call this variable instead since the global scope cannot access the variable inside the function, and it returns Laisha.
 
 
 12. **What does the following code log? Why?**

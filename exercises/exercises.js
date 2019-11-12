@@ -15,14 +15,15 @@ function stripPunctuation(str) {
 }
 
 // Question 2
-function rotateArray(arr) {
-  let arr = array;
+function rotateArray(array) {
   let empty = [];
-  if (array.length <= 0) {
-    return empty;
-  }
+  
   if (!Array.isArray(array)) {
     return undefined;
+  }
+  
+  if (array.length === 0) {
+    return empty;
   }
 
   const arrayCopy = array.slice();
