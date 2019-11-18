@@ -11,55 +11,40 @@ function stripPunctuation(phrase) {
 }
 
 // Question 2
-function rotateArray(arrayIn) {
-  let outPut;
-  if (typeof (arrayIn) !== 'object') {
-    return outPut;
+function rotateArray (arrayIn) {
+  const finalArr = [];
+  if (!Array.isArray(arrayIn)) {
+    return undefined;
   }
-  if (arrayIn.length !== 0) {
-    outPut = [];
+  if (arrayIn.length > 1) {
     for (let i = 1; i < arrayIn.length; i += 1) {
-      outPut.push(arrayIn[i]);
+      finalArr.push(arrayIn[i]);
     }
-    outPut.push(arrayIn[0]);
-    return outPut;
+    finalArr.push(arrayIn[0]);
+    return finalArr;
   }
-  outPut = [];
-  return outPut;
+  return arrayIn;
 }
 
 // Question 3
+const lowerCasedChars = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'e', 'i', 'o', 'u'];
+const upperCasedChars = ['B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'A', 'E', 'I', 'O', 'U'];
 function letterCaseCounts(phrase) {
-  const lowerCasedChars = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'e', 'i', 'o', 'u'];
-  const upperCasedChars = ['B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'A', 'E', 'I', 'O', 'U'];
-  // Helpers
-  function lowerCaseCount () {
-    let count = 0;
-    for (const char of phrase) {
-      if (lowerCasedChars.includes(char)) {
-        count += 1;
-      }
-    }
-    return count;
-  }
-  function upperCaseCount () {
-    let count = 0;
-    for (const char of phrase) {
-      if (upperCasedChars.includes(char)) {
-        count += 1;
-      }
-    }
-    return count;
-  }
-  function nonAlphaNumCount () {
-    return phrase.length - upperCaseCount() - lowerCaseCount();
-  }
-  const phraseCaseCount = {
-    lowercase: lowerCaseCount(),
-    uppercase: upperCaseCount(),
-    neither: nonAlphaNumCount(),
+  const charCaseCounts = {
+    lowercase: 0,
+    uppercase: 0,
+    neither: 0,
   };
-  return phraseCaseCount;
+  for (const char of phrase) {
+    if (lowerCasedChars.includes(char)) {
+      charCaseCounts.lowercase += 1;
+    } else if (upperCasedChars.includes(char)) {
+      charCaseCounts.uppercase += 1;
+    } else {
+      charCaseCounts.neither += 1;
+    }
+  }
+  return charCaseCounts;
 }
 
 // Don't write below this line...
