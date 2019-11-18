@@ -1,17 +1,17 @@
 # Unit 2 Assessment - JavaScript Fundamentals
 ## Written Assessment
 
-1. **What is hoisting? Describe how hoisting affects variable _and_ function declarations. Provide a code snippet to illustrate hoisting for both.** 
+1. **What is hoisting? Describe how hoisting affects variable _and_ function declarations. Provide a code snippet to illustrate hoisting for both.**
   - Hoisting refers to the process of the compiler that checks our code for functions and variables (between author and run times) and tracks them in a lexical environment. Variables and functions are hoisted in JavaScript, meaning they can be referenced before their explicit declaration. This gives the illusion that variables and functions are brought up to the top of code, hoisted. Variables are hoisted differently depending on the keyword that was used to declare them. Variables declared with `let` and `const` are written to the lexical environment as uninitialized, while those with `var` are set as undefined. Function declarations are hoisted and can be invoked before their written definition.
   ```javascript
   console.log(`I am ${joy}`); //I am undefined
   var joy = 'Hello World';
-  
+
   console.log(`I am ${wow}`); //ReferenceError, joy hasn't been initialized!
   let wow = 'Hello World';
-  
+
   console.log(addNumbers(1, 2)); //3
-  
+
   function addNumbers (a, b) {
     return a + b;
   }
@@ -97,7 +97,7 @@
   sum(100, 200, 800, 1, 1, 1); // 1103;
   ```
   - Rest parameters allows us to define functions that may take any number of arguments. This differs from arguments because our unknown amount of arguments are part of an array when using rest parameters.
-  
+
   ```javascript
   sum = (...numbers) => {
     let finalSum = 0;
@@ -119,7 +119,7 @@
   shoutOut();
   console.log(`The best designer in the room is ${theCreator}`.);
   ```
-  - This logs `The best designer in the room is Peter` because `theCreator` was properly reassiged by the invokation of the `shoutOut` function that could access it because scope allows children scope to access parent ones.
+  - This logs `The best designer in the room is Peter` because `theCreator` was properly assigned by the invocation of the `shoutOut` function that could access it because scope allows children scope to access parent ones.
 
 11. **What does the following code log? Why?**
   ```javascript
@@ -150,8 +150,8 @@
   - This logs `'829 Jefferson Ave.'` and `'Our address is 7 Marcus Garvey'` because when our function is invoked and given `address` only its value is passed to the function. Inside our function the parameter `location` is assigned this value, but reassiged to `'829 Jefferson Ave.'` and logged. Our `address` variable that is logged in the last line was not change because when we passed it to the function it was only by value and a copy was made for this purpose.
 
 13. **What do we mean when we say that JavaScript passes variables _by value_?**
-  
-    - This means the value of our variables is copied and pointed to by the variable that it was passed to. Our original variable still refereces the value it was assigned.
+
+  - Passing by value means that when variables are passed to functions a copy of the value is made. This allows us to manipulate a known value without affecting the original binding holding it.
 
 14. **What does it mean to _pass by reference_? In what ways do arrays and objects appear to be passed by reference in JavaScript?**
-    - Passing by reference means the value passed to another variable or function is the address in memory to the value of our original variable. Arrays and objects demonstrate this when a varible is assigned another variable whose value is an object or array and making a change to the second varibale also mutates the first!
+    - Passing by reference means the value passed to a function is the address in memory to the value of our original variable. Arrays and objects demonstrate this when a variable is assigned another variable whose value is an object or array and making a change to the second variable also mutates the first.
