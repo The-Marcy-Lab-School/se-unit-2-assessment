@@ -6,9 +6,11 @@
   In terms of variables all varibales are hoisted however the process of how their values are returned differs slighlty. `var` variables are initialized to `undefined` in the compiling phase. It will remain so until the compiler reaches an assignment line for the variable. Though `let` and `const` are hoisted, these variables are uninitialized. If the `let` variable cannot find a value at the line where it was declared the variable will return an undefined value, `const`variables will return an error. Functions will only be hoisted if they are function declarations not initializations. 
 
   ```javascript
-    let greeting;
-    console.log(greeting); // this line outputs to undefined
     greeting = "hello";
+    console.log(greeting); 
+    var greeting;
+    // this snippet outputs to 'hello' due to hoisting
+    
     
     hello();       //will log the string, this happens as this is function declaration not intialization
     function hello() {
@@ -134,7 +136,7 @@
   The code will log 
   `Paul is the hardest working person in the room.` and then
   `Laisha is also the hardest working person in the room.`
-  This occurs as the `shoutOut` function logs the theHustler variable that was declared and assigned within the function scope. The last console.log references the global variable theHustler that was assinged the string 'Laisha'.
+  This occurs as the `shoutOut` function logs the locally scoped `theHustler` variable that was initialized to the `string` value 'Paul'. This occurs as the function acknowledges the variable as only exisiting within the function. The console.log below the function invocation, references the global variable theHustler that was assinged the string 'Laisha' and logs the sentence phrase. 
 
 
 12. **What does the following code log? Why?**
@@ -152,11 +154,10 @@
   The code logs
   `'829 Jefferson Ave.'`
   `'Our address is 7 Marcus Garvey'`
-  This is because the setLocation(location) call logs function scoped variable location. The console.log logs the globally scoped variable address
+  This is because the setLocation(location) invocation takes in the variable address as a parameter and reassigns its value within the function. This reassignment is functionally scoped therefore `'829 Jefferson Ave.'` would be logged out. The console.log call would log the globally scoped variable address that contains the value `'7 Marcus Garvey'`. 
 
 
 13. **What do we mean when we say that JavaScript passes variables _by value_?**
-  This means that variables assigned to a value when passed to a fucntion do not change in their value. 
-
+  Passed by value refers to variables that are passed by the actual value that they are assigned to. This means that the value passed into the parameter is copied into another memory location. 
 14. **What does it mean to _pass by reference_? In what ways do arrays and objects appear to be passed by reference in JavaScript?**
-  Passed by reference would mean having variables, arrays, objects be copied and mutable in a function.
+  Passed by reference refers to a memory address of a variable that is passed on. This memory address defines where the value of the variable is stored. 
