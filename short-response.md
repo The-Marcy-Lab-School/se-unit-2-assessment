@@ -2,8 +2,22 @@
 ## Written Assessment
 
 1. **What is hoisting? Describe how hoisting affects variable _and_ function declarations. Provide a code snippet to illustrate hoisting for both.** 
-Answer: Hoisting is the process of JavaScript uplifting our functions calling to the top of our code. Only `var` variables and function declarations are hoisted. 
-
+Answer:Hoisting is when, during the moment the computer compiles, it picks up all function declarations and variables and brings it to the very top of the scope, although your code all remains exactly where it was written. Hoisting can affect the way your code is written because with `var` variables, they are taken during the compiling stage, declared, and initialized with undefined. `let` and `const` variables are declared but not initialized, which makes you right your code in chronogical order.
+``` Example of var hoisted:
+console.log(greeting); //Expected output: undefined
+var greeting = 'Hello world!';
+```
+```
+Example of let being hoisted(also applied to const)
+console.log(greeting); //Expected output: reference error
+let greeting = 'Hello world!';
+```
+``` Function Declarations
+greeting(); //Expected output: 'Hello world!'
+function greeting() {
+  console.log('Hello world!');
+}
+```
 
 
 2. **Why does the following block of code throw an error?**
@@ -18,7 +32,7 @@ Answer: Hoisting is the process of JavaScript uplifting our functions calling to
 
   console.log(status);
 ```
-Answer: This code throw an error because we are trying to redeclared status twice on line 13 and line 15 we only need to declare it once. Also since we declare it inside a block scope `console.log` on line 18 does not see status so it is `undefined` unless we `console log` inside our block scope or if we declarate once status outside our block scope.
+Answer: This code throw an error because This is an `if... else` statement, meaning that only line 27 OR line 29 will be run. Also since we declare it inside a block scope. If we try to access a variable that is out of scope, we will get a Reference Error.
 
 
 3. **Why does the following block of code NOT throw an error?**
@@ -38,9 +52,7 @@ Answer: `Var` is a function scope that can be accessed globally and can be redec
 
 
 4. **In JavaScript, we can declare variables with `var`, `let`, and `const`. What are the differences between each? Be sure to comment on how each declaration impacts the _scope_, _reassignment_, and _hoisting_ of variables.**
-Answer: `Var` and `let` values can be reassign , `const` value cannot be reassign. `Let` and `const` are local block scope. `Var` is a function scope. Only `var` can be hoisted because it is a global scope.
-
-
+Answer: `Var` and `let` values can be reassigned. `Const` value cannot be reassigned. `Let` and `const` are local block scope. `Var` is a function scope. Only `var` can be hoisted because it is a function scoped.
 
 5. **What does the following code log? Explain why?**
   ```javascript
@@ -60,7 +72,7 @@ Answer: The following code logs "Kevin Durant" because on line 48 we declared `t
   console.log(a);
   console.log(b);
   ```
-The value of `b` after this code runs is still 10 because on line 57 we declared `a` and assigned it the value of `a` which hold a number value of `10`. On line 58 all we did was add 10 to `a` again and we never reassign `b` the new value of `a` so it remain the first value(10).
+The value of `b` after this code runs is still 10 because on line 57 we declared `a` and assigned it the value of `a` which hold a number value of `10`. On line 58 all we incremented `a` but we never reassign `b` the new value of `a` so it retains it's value.
 
 7. **Where does the following code throw an error? What type of error? Why?**
   ```javascript
@@ -99,7 +111,7 @@ function sum (...number){
 }
 
 ```
-Answer: The purpose of _rest parameters_ is to be able to use our function whenever we want to take an indefinite number of arguments.They differ from the `arguments` object because the `arguments` object is arraylike and not an array.
+Answer: The purpose of _rest parameters_ is to be able to call function an indefinite number of arguments.They differ from the `arguments` object because the `arguments` object is arraylike and not an array.
 
 
 
@@ -114,7 +126,7 @@ Answer: The purpose of _rest parameters_ is to be able to use our function whene
   shoutOut();
   console.log(`The best designer in the room is ${theCreator}`.);
   ```
-Answer: The following code logs `"The best designer in the room is Peter"` because we are reassigning `theCreator` value to equal `"Peter"` on line 112.
+Answer: The following code logs `"The best designer in the room is Peter"` because we are reassigning `theCreator` value of `"Peter"` on line 112.
 
 11. **What does the following code log? Why?**
   ```javascript
@@ -129,7 +141,8 @@ Answer: The following code logs `"The best designer in the room is Peter"` becau
   console.log(`${theHustler} is also the hardest working person in the room.`);
   ```
 Answer: Line 129 logs `"Paul is the hardest working person in the room."` because we are declaring a new `theHustler` inside a function scope and assigning it a value of `"Paul"` and we are logging inside our function so it is only looking within that scope.
-Line 130 logs `"Laisha is also the hardest working person in the room."` because since  `theHustler` was also declared outside the function and logged outside the function JavaScript is just ignoring our function and logging the `theHustler` outside that is assigned `"Laisha"`.
+Line 130 logs `"Laisha is also the hardest working person in the room."` because since  `theHustler` was also declared outside the function and logged outside the function. The program  don't have access to variables declared in that function's inner scope.
+
 
 12. **What does the following code log? Why?**
   ```javascript
@@ -143,10 +156,10 @@ Line 130 logs `"Laisha is also the hardest working person in the room."` because
   setLocation(address);
   console.log(`Our address is ${address}`);
   ```
-Answer: On line 143 logs `"829 Jefferson Ave."` because we are passing `address` as an argument into our function `setLocation` and our function reassign `address` value to `location` value. On line 144 `console.log` logs `"Our address is 7 Marcus Garvey"` because `address` value is `"7 Marcus Garvey"` so string interpolation just concatnate the sentence and value of `address`.
+Answer: On line 156 logs `"829 Jefferson Ave."` because we are passing `address` as an argument into our function `setLocation` and our function reassign `address` value to `location` value. On line 57 `console.log` logs `"Our address is 7 Marcus Garvey"` because the `address`  variable has a value of `"7 Marcus Garvey".` The program uses string interpolation  to concatenate the sentence with value of ` address`.
 
 13. **What do we mean when we say that JavaScript passes variables _by value_?**
-Answer: When we say that JavaScript passes variables by value we just mean that a copy of the varibale value is passed. This will not affect the first value only the copy value.
+Answer: When we say that JavaScript passes variables by value we, just mean that a copy of the value is passed. This will not affect the first value only the copy value.
 
 
 14. **What does it mean to _pass by reference_? In what ways do arrays and objects appear to be passed by reference in JavaScript?**
