@@ -6,7 +6,7 @@
    ```javascript
    stripPunctuation('abc+def+ghi!!!'); // 'abcdefghi'
    stripPunctuation('+1 919-644-9821'); // '19196449821'
-   stripPunctuation("Don't play with me!"); // 'Dontplaywithme'
+    // 'Dontplaywithme'
    ```
 
 

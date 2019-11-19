@@ -1,22 +1,38 @@
 // Question 1
-function stripPunctuation() {
-    str = str.split(' ');
-    for (let i =0; i < str.length; i += 1){
+const stripPunctuation = function(str){
+  let strArr = str.split('');
+  let newstrArr = '';
+  for(let i = 0; i< strArr.length; i += 1){
+    if((strArr[i] >= 'a' && strArr[i] <= 'z') || (strArr[i] >= 'A' && strArr[i] <= 'Z')){
+      newstrArr += strArr[i];
+    } else if(Number(strArr[i])){
+      newstrArr += strArr[i];
     }
 }
+  return newstrArr;
+};
+
+stripPunctuation('abc+def+ghi!!!');
+stripPunctuation('+1 919-644-9821');
+stripPunctuation("Don't play with me!");
 
 // Question 2
-function rotateArray(array){
-    let newArr = [];
-    for(let i = 0; i < array.length; i += 1){
-        let del = array.shift();
-        newArr = array.push(del);
-    }
+function rotateArray(arr) {
+  let newArr;
+  if (!Array.isArray(arr)) {
+    return undefined;
+  }
+  if (arr.length !== 0) {
+    newArr = arr.slice('');
+
+    const firstEl = newArr.shift();
+    newArr.push(firstEl);
     return newArr;
-}
-// Code above do not work.
-let myArr = [1,2,3,4];
-rotateArray(myArr);   
+  }
+  return [];
+};	
+
+rotateArray([{ a: 2 }, [1, 2], 3]);
 
 
 // Question 3
