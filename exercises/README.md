@@ -24,7 +24,7 @@
   rotateArray([{ a: 2 }, [1, 2], 3]);    // [[1, 2], 3, { a: 2 }]
   rotateArray([]);                       // []
 
-  // return `undefined` if the argument is not an array
+  // return `undefined` if the ar gument is not an array
   rotateArray();                         // undefined
   rotateArray(1);                        // undefined
 

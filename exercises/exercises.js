@@ -12,11 +12,10 @@ function stripPunctuation(string) {
 }
 
 // Question 2
-function rotateArray(array) {
-  let newArray = []; // empty
-  newArray = array; // my New Array
-  let firstElement;
-  firstElement = newArray[0];
+function rotateArray(arr) {
+  let newArray = arr; // my New Array
+  let firstElement = arr[0];
+  lastElement = newArray[newArray.length]
   const finalArray = []; // The output, empty array for now
 
   // Conditionals
@@ -31,31 +30,21 @@ function rotateArray(array) {
   return finalArray;
 }
 
-
 // Question 3
-function letterCaseCounts(string) {
-  let lowCounter = 0;
-  let upperCounter = 0;
-  let neighterCounter = 0;
-  const neighterRegex = /^[a-zA-Z0-9!@#\$%\^\&*\)\(+=._-]+$/g;
+const letterCaseCounts = (str) => { 
+   const splitString = str.split('');
+   let finalObj = {uppercase: 0, lowercase: 0, neither: 0};
 
-  upperCounter = (string.match(/[A-Z]/g) || []).length;
-  lowCounter = (string.match(/[a-z]/g) || []).length;
-
-  // let newString = string.split("");
-  // for (i = 0; i < newString.length; i++) {
-  // if (newString[i] == ' ' || newString.match(/\W|_/g) !== null) {
-  //   neighterCounter = neighterCounter + 1;
-  // }
-
-  // }
-
-
-  // MY attempt at the last property^
-
-  neighterCounter = (string.match(neighterRegex) || []).length;
-
-  console.log(`uppercase: ${upperCounter}, lowercase: ${lowCounter}, neighter: ${neighterCounter}`);
+    for (letter of splitString) {
+    if (letter.charCodeAt() > 64 && letter.charCodeAt() < 91) {
+      finalObj.uppercase = finalObj.uppercase + 1;
+    } else if (letter.charCodeAt() < 123 && letter.charCodeAt() > 96) {
+       finalObj.lowercase = finalObj.lowercase + 1;
+    } else {
+      finalObj.neither = finalObj.neither + 1;
+    }
+  }
+  return finalObj;
 }
 
 // Don't write below this line...
