@@ -6,9 +6,9 @@
 
 2. **Why does the following block of code throw an error?**
   ```javascript
-  const isMaya🧘🏽‍♀️ = true;
+  const isMaya = true;
 
-  if (isMaya🧘🏽‍♀️) {
+  if (isMaya) {
     let status = 'Everything is just fine';
   } else {
     let status = 'Time to panic.'
@@ -91,7 +91,7 @@
   }
 
   shoutOut();
-  console.log(`The best designer in the room is ${theCreator}`.);
+  console.log(`The best designer in the room is ${theCreator}.`);
   ```
 
 
