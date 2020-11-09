@@ -9,12 +9,12 @@
   const isMaya = true;
 
   if (isMaya) {
-    let status = 'Everything is just fine';
+    let currentStatus = 'Everything is just fine';
   } else {
-    let status = 'Time to panic.'
+    let currentStatus = 'Time to panic.'
   }
 
-  console.log(status);
+  console.log(currentStatus);
 ```
 
 
@@ -23,12 +23,12 @@
   const isLaishaOnTime = true;
 
   if (isLaishaOnTime) {
-    var status = 'Everything is just fine';
+    var currentStatus = 'Everything is just fine';
   } else {
-    var status = 'Time to panic.'
+    var currentStatus = 'Time to panic.'
   }
 
-  console.log(status);
+  console.log(currentStatus);
   ```
 
 
