@@ -51,6 +51,6 @@
   letterCaseCounts('AbCd +Ef');
   // { lowercase: 3, uppercase: 3, neither: 2 }
 
-  letterPercentages('123');
+  letterCaseCounts('123');
   // { lowercase: 0, uppercase: 0, neither: 3 }
   ```
