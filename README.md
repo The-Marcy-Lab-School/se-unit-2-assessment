@@ -18,7 +18,7 @@
    **Note:** You are not done with your exercises until all tests pass and there are no eslint errors.
 
 
-When you are done with both sections. Push your final commits submit the URL through Canvas.
+When you are done with both sections. Push your final commits and submit the URL through Canvas.
 
 
 ### Tips
