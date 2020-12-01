@@ -127,4 +127,3 @@
 
 
 14. **What does it mean to _pass by reference_? In what ways do arrays and objects appear to be passed by reference in JavaScript?**
-
