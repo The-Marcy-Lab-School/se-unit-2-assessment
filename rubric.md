@@ -17,13 +17,13 @@
 * **3**: Your algorithm solves the problem efficiently and it is implemented correctly.
 * **2**: Your algorithm solves the problem but does so in an inefficient manner OR your algorithm has a minor error in implementation.
 * **1**: There is a major or multiple minor errors in the implementation of your algorithm.
-* **0**: Your algorithm will not produce a solution to the given problem.
+* **0**: Your algorithm will not produce any solution to the given problem, or the solution is grossly incorrect.
 
 ### Code Style
 * **3**: Your code is readable, conventional, and utilizes ES6 features to enhance readability efficiency. All variables and functions are thoughtfully named.
-* **2**: Your code has minor style errors (spacing, quotations, etc).
-* **1**: Your code has multiple style errors or poorly named variables. 
-* **0**: Your code has syntax errors.
+* **2**: Your code has minor style errors (spacing, quotations, etc), vague variable names.
+* **1**: Your code has multiple style errors, poorly named variables, or minor syntax errors. 
+* **0**: Your code has major syntax errors.
 
 
 ## Total Possible Points on Unit 2 Assessment
