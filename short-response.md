@@ -109,23 +109,8 @@
   console.log(`${theHustler} is also the hardest working person in the room.`);
   ```
 
-
-12. **What does the following code log? Why?**
-  ```javascript
-  let address = '7 Marcus Garvey';
-
-  function setLocation(location) {
-    location = '829 Jefferson Ave.';
-    console.log(location);
-  }
-
-  setLocation(address);
-  console.log(`Our address is ${address}`);
-  ```
+12. **What do we mean when we say that JavaScript passes variables _by value_?**
 
 
-13. **What do we mean when we say that JavaScript passes variables _by value_?**
-
-
-14. **What does it mean to _pass by reference_? In what ways do arrays and objects appear to be passed by reference in JavaScript?**
+13. **What does it mean to _pass by reference_? In what ways do arrays and objects appear to be passed by reference in JavaScript?**
 
