@@ -88,6 +88,7 @@
 
   function shoutOut() {
     theCreator = 'Peter';
+    console.log(`The best designer in the room is ${theCreator}.`);
   }
 
   shoutOut();
