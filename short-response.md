@@ -1,7 +1,7 @@
 # Unit 2 Assessment - JavaScript Fundamentals
 ## Written Assessment
 
-1. **What is hoisting? Describe how hoisting affects variable _and_ function declarations. Provide a code snippet to illustrate hoisting for both.** 
+1. **What is hoisting? Describe how hoisting affects variable _and_ function declarations. Provide code snippets to illustrate hoisting for both.** 
 
 
 2. **Why does the following block of code throw an error?**
