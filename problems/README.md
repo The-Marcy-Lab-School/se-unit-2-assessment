@@ -10,7 +10,7 @@
    ```
 
 
-2. **Write a function that rotates an array by moving the first element to the end of the array. Do not modify the original array.**
+2. **Write a function that rotates an array by moving the first element to the end of the array. Do not modify the original array.
 
   * If the input is not an array, return undefined.
   * If the input is an empty array, return an empty array.
@@ -36,7 +36,7 @@
   ```
 
 
-3. **Write a function that takes a string, and returns an object containing the following three properties:**
+3. **Write a function that takes a string, and returns an object containing the following three properties:
 
   * The number of characters in the string that are lowercase letters
   * The number of characters that are uppercase letters
