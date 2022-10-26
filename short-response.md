@@ -15,7 +15,7 @@
   }
 
   console.log(currentStatus);
-```
+  ```
 
 
 3. **Why does the following block of code NOT throw an error?**
