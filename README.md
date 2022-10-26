@@ -22,7 +22,7 @@ When you are done with both sections. Push your final commits and submit the URL
 
 
 ### Tips
-* This is open book, open note, open documentation, open console. Use your resources. Just don't use your neighbor or watch past lecture videos. 😉
+* This is open book, open note, open documentation, open console. Use your resources. Just don't use your neighbor. 😉
 * If you're not sure what a question is asking, reach out to an instructor. 
 * Pay close attention to your spelling and grammar. For short responses, if you want to take advantage of spell check, etc., you can always type in a word document first and then copy your responses over.
 * We're looking for clarity and conciseness. Answer the questions as directly as you possibly can, in as few words as you possibly can, while using as precise of language as you possibly can.
