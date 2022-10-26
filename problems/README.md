@@ -31,8 +31,8 @@
 
   // the input array is not mutated
   const array = [1, 2, 3, 4];
-  rotateArray(array);                    // [2, 3, 4, 1]
-  array;                                 // [1, 2, 3, 4]
+  console.log(rotateArray(array));                    // [2, 3, 4, 1]
+  console.log(array);                                 // [1, 2, 3, 4]
   ```
 
 
