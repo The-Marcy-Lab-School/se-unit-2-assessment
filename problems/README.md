@@ -10,12 +10,12 @@
    ```
 
 
-2. **Write a function that rotates an array by moving the first element to the end of the array. Do not modify the original array.
+2. **Write a function that rotates an array by moving the first element to the end of the array. Do not modify the original array.**
 
   * If the input is not an array, return undefined.
   * If the input is an empty array, return an empty array.
   
-  Review the test cases below, then implement the solution accordingly.**
+  Review the test cases below, then implement the solution accordingly.
   ```javascript
   rotateArray([7, 3, 5, 2, 9, 1]);       // [3, 5, 2, 9, 1, 7]
   rotateArray(['a', 'b', 'c']);          // ["b", "c", "a"]
@@ -36,13 +36,13 @@
   ```
 
 
-3. **Write a function that takes a string, and returns an object containing the following three properties:
+3. **Write a function that takes a string, and returns an object containing the following three properties:**
 
   * The number of characters in the string that are lowercase letters
   * The number of characters that are uppercase letters
   * The number of characters that are neither
 
-  You may assume that the string will always contain at least one character.**
+  You may assume that the string will always contain at least one character.
 
   ```javascript
   letterCaseCounts('abCdef 123');
